@@ -1,0 +1,176 @@
+<html> 
+
+ <heat> <title>index.html</heat> </title>
+ 
+ <center> <table border="4">
+
+ <tr>
+
+
+  <td><center>
+<a href="cecytem.html"><center><img src="ooc.png" width="150" height="80"></center>
+<a href="mision.html"><center><img src="mundo.png" width="150" height="80"></center>
+<a href="vision.html"><center><img src="ooo.png" width="150" height="80"></center>
+<a href="0rnigeama.html"><center><img src="klk.png" width="150" height="80"></center>
+<a href="croquis.html"><center><img src="run.png" width="150" height="80"></center>
+
+ <td colspan="4">  <center> <img src="Encabesado.png" widht="20"height="90"><center>
+  <center> <img src="ford.jpg" widht="70"height="150"><center>
+ <h1>  <center>  <font size="6"> <font face="Times New Roman"> Colegio De Estudios Científicos y Tecnológicos Del<br> Estado De México  </font face> </font size> </center>  </h1>
+ 
+ <h1>  <font face="Engravers MT">   <font size="5">   Modulo 3   </font size>  </font face>  </h1>
+
+ <h1>  <font size="4">  Submódulo  2 Desarrolla aplicaciones que se ejecuten en el cliente  </font size>  </h1>
+ <h1>  <font size="4">  Submódulo  3 Desarrolla aplicaciones que se ejecuten en el servidor  </font size>  </h1>
+ <h1> <font color="Black"> <font size="4">  <font face="Times New Roman">  Nombre del Alumno: Isaac Claudio Hernández  Grupo: 402  </font face> </font size> </font color> </center> </h1> 
+ <h1>  <font size="4">  <font color="Black">  Nombre de la docente: Celia Romero Pichardo  </font color>  </font size> </h1>
+ <center> <h1> <font color="Black"> <font size="5"> N.L:05 Carrera: programación </font size> </font color> </h1> </center> 
+ <h1> </h1>
+ </font color> </font size> </h1> </center> </center> </td>
+ <h1>
+
+
+<td>  calendario y fecha<br>
+
+<font color="black" size="2" face="tahoma">
+<script type="text/javascript">
+    function greeting()
+{
+   var today = new Date();
+   var hrs = today.getHours();
+   document.writeln("<CENTER>");
+  // document.write("<H1>Buen");
+   if (hrs < 6)
+      document.write("");
+   else if (hrs < 12)
+      document.write("");
+   else if (hrs <= 18)
+      document.write("");
+   else
+      document.write("");
+   document.writeln("</H1>");
+   //document.write("Ingresaste a esta pagina el ");
+   dayStr = today.toLocaleString();
+   //document.write(dayStr);
+   document.writeln("</CENTER>");
+}
+function montharr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11)
+{
+   this[0] = m0;
+   this[1] = m1;
+   this[2] = m2;
+   this[3] = m3;
+   this[4] = m4;
+   this[5] = m5;
+   this[6] = m6;
+   this[7] = m7;
+   this[8] = m8;
+   this[9] = m9;
+   this[10] = m10;
+   this[11] = m11;
+}
+function calendar()
+{
+   var monthNames = "EneFebMarAbrMayJunJulAgoSepOctNovDic";
+   var today = new Date();
+   var thisDay;
+   var monthDays = new montharr(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+   year = today.getYear() ;
+   thisDay = today.getDate();   
+   if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+   monthDays[1] = 29;
+   nDays = monthDays[today.getMonth()];
+   firstDay = today;
+   firstDay.setDate(1); // works fine for most systems
+   testMe = firstDay.getDate();
+   if (testMe == 2)
+   firstDay.setDate(0);    
+   startDay = firstDay.getDay();
+   document.writeln("<CENTER>");
+   document.write("<TABLE BORDER>");
+   document.write("<TR><TH COLSPAN=10>");
+   document.write(monthNames.substring(today.getMonth() * 3,
+   (today.getMonth() + 1) * 3));
+   document.write(". ");
+   document.write(year);
+   document.write("<TR><TH>D<TH>L<TH>M<TH>M<TH>J<TH>V<TH>S");
+   document.write("<TR>");
+   column = 0;
+   for (i=0; i<startDay; i++)
+   {
+   document.write("<TD>");
+   column++;
+   }
+   for (i=1; i<=nDays; i++)
+   {
+   document.write("<TD>");
+   if (i == thisDay)
+   document.write("<FONT COLOR=\"#FF0000\"><b>")
+   document.write(i);
+   if (i == thisDay)
+   document.write("</b></FONT>")
+   column++;
+   if (column == 7)
+   {
+   document.write("<TR>"); 
+   column = 0;
+   }
+   }
+   document.write("</TABLE>");
+   document.writeln("</CENTER>");
+}
+   greeting();
+   document.write("</br>");
+   calendar();
+   document.write("");
+   </script>
+
+
+
+<script>
+function usrpas(){
+if(document.form1.txt.value=="isaac" && document.form1.password.value=="23")
+{window.location="menu.html"}
+else {alert("Ingreso denegado, vuelva a intentarlo mas tarde")}
+}
+document.oncontextmenu=new Fuction("return false");
+
+</script>
+
+<form name="form1">
+<width="300"><label>Escribe  N. Usuario</label><br>
+<center><strong></center></strong><input type="text" name="txt" placeholder="usuario"><br></br>
+
+<width="300"><label>Contraseña</label><br>
+<center><strong></center></strong><input type="password" name="password" placeholder="Contraseña"><br></br>
+<input type="button" value="Iniciar" onclick="usrpas()">
+<button onclick="limpiarCeldas()">Limpiar</button>
+</td>
+
+
+
+
+
+
+
+</td>
+
+ </tr>
+
+
+</center> </table border>
+
+<center> <h1> <font color="Black"> <font size="4">  Derechos de Autor: Isaac claudio Hernández </font color> </font size> </h1> </center> </center> 
+ <center> <h1> <font color="Black"> <font size="4">  Este documento tiene todas las marcas registrada mencionadas en este sitio web son propiedad del respectivo dueño </font color> 
+</font size> </h1> </center> </center> </td>
+ 
+
+
+
+ </tr>
+
+
+
+
+ </body>
+ </html>
